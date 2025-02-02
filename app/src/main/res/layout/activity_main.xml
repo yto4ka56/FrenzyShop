@@ -8,50 +8,41 @@
     android:scrollIndicators="top|left"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="441dp"
-        android:layout_height="176dp"
-        android:text="Nicaragua"
-        android:textColor="#105099"
-        android:textColorHint="#241B1B"
-        android:textCursorDrawable="@android:drawable/arrow_up_float"
-        android:textSize="60sp"
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="386dp"
+        android:layout_height="472dp"
+        android:layout_marginBottom="168dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.261" />
+        app:srcCompat="@drawable/fs_removebg_preview__1_" />
 
-    <EditText
-        android:id="@+id/editTextNumberPassword"
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="numberPassword"
-        tools:layout_editor_absoluteX="78dp"
-        tools:layout_editor_absoluteY="73dp" />
+        app:barrierDirection="left" />
 
-    <EditText
-        android:id="@+id/editTextTextEmailAddress"
+    <TextView
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textEmailAddress"
-        tools:layout_editor_absoluteX="95dp"
-        tools:layout_editor_absoluteY="293dp" />
-
-    <TableRow
-        android:layout_width="307dp"
-        android:layout_height="180dp"
-        tools:layout_editor_absoluteX="71dp"
-        tools:layout_editor_absoluteY="377dp" >
-
-        <Button
-            android:id="@+id/button"
-            android:layout_width="244dp"
-            android:layout_height="147dp"
-            android:text="Button" />
-    </TableRow>
-
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="610dp"
+        android:layout_marginEnd="140dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="sans-serif-thin"
+        android:text="DESIGN BY BSUIR"
+        android:textColor="#090707"
+        android:textColorLink="#0B0B0B"
+        android:textDirection="anyRtl"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.007"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
