@@ -9,19 +9,19 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="FrenzyShop"
-        android:textColor="#991010"
+        android:layout_width="441dp"
+        android:layout_height="176dp"
+        android:text="Nicaragua"
+        android:textColor="#105099"
         android:textColorHint="#241B1B"
         android:textCursorDrawable="@android:drawable/arrow_up_float"
-        android:textSize="24sp"
+        android:textSize="60sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.293"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.251" />
+        app:layout_constraintVertical_bias="0.261" />
 
     <EditText
         android:id="@+id/editTextNumberPassword"
@@ -45,6 +45,13 @@
         android:layout_width="307dp"
         android:layout_height="180dp"
         tools:layout_editor_absoluteX="71dp"
-        tools:layout_editor_absoluteY="377dp" />
+        tools:layout_editor_absoluteY="377dp" >
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="244dp"
+            android:layout_height="147dp"
+            android:text="Button" />
+    </TableRow>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
