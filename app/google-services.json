@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "381713556746",
+    "project_id": "frenzyshop-61859",
+    "storage_bucket": "frenzyshop-61859.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:381713556746:android:db8854b6f56502d7b846f3",
+        "android_client_info": {
+          "package_name": "com.example.frenzyshop"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBIeJrojOBQe9bKbpqKwqANLp0Gr46LTZ0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
