@@ -28,7 +28,6 @@
         android:textColor="#060909"
         android:textColorHint="#040303"
         android:textSize="36sp"
-
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
@@ -73,7 +72,7 @@
         app:layout_constraintTop_toBottomOf="@+id/sign_in_email" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/text_or"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -84,7 +83,7 @@
         app:layout_constraintTop_toBottomOf="@+id/sign_in_password" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/entrance_with_help"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -93,7 +92,7 @@
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintTop_toBottomOf="@+id/text_or" />
 
     <EditText
         android:id="@+id/sign_in_vk"
@@ -111,7 +110,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.881"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintTop_toBottomOf="@+id/entrance_with_help" />
 
     <EditText
         android:id="@+id/sign_in"
@@ -129,7 +128,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintTop_toBottomOf="@+id/entrance_with_help" />
 
     <EditText
         android:id="@+id/sign_in_google"
@@ -147,10 +146,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.114"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintTop_toBottomOf="@+id/entrance_with_help" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/text_registration"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
@@ -162,7 +161,7 @@
         app:layout_constraintTop_toBottomOf="@+id/sign_in" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/text_design_peoples"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
