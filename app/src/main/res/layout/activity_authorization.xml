@@ -8,6 +8,46 @@
     tools:context=".AuthorizationActivity">
 
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/sign_in"
+        android:layout_width="350dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="96dp"
+        android:background="@drawable/back_button"
+        android:drawablePadding="15dp"
+        android:elevation="2dp"
+        android:fontFamily="sans-serif-thin"
+        android:text="Войти"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/entrance_with_help" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/sign_in_vk"
+        android:layout_width="150dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/back_button"
+        android:drawableLeft="@drawable/vk_compact_logo__2021_present__svg_removebg_preview__1_"
+        android:drawablePadding="0dp"
+        android:elevation="2dp"
+        android:fontFamily="sans-serif-thin"
+        android:paddingLeft="14dp"
+        android:text=" ВКонтакте"
+        android:textAlignment="viewStart"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.881"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/entrance_with_help" />
+
     <ImageView
         android:id="@+id/logo_frenzy"
         android:layout_width="271dp"
@@ -94,71 +134,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_or" />
 
-    <EditText
-        android:id="@+id/sign_in_vk"
-        android:layout_width="150dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/back_button"
-        android:drawableLeft="@drawable/vk_compact_logo__2021_present__svg_removebg_preview__1_"
-        android:drawablePadding="10dp"
-        android:elevation="2dp"
-        android:fontFamily="@font/latoregular"
-        android:hint="ВКонтакте"
-        android:paddingLeft="10dp"
-        android:textSize="18dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.881"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/entrance_with_help" />
-
-    <EditText
-        android:id="@+id/sign_in"
-        android:layout_width="350dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="92dp"
-        android:background="@drawable/back_button"
-        android:drawablePadding="15dp"
-        android:elevation="2dp"
-        android:fontFamily="@font/latoregular"
-        android:gravity="center"
-        android:hint="Войти"
-        android:textColor="#0C0C0D"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/entrance_with_help" />
-
-    <EditText
-        android:id="@+id/sign_in_google"
-        android:layout_width="150dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/back_button"
-        android:drawableLeft="@drawable/google"
-        android:drawablePadding="10dp"
-        android:elevation="2dp"
-        android:fontFamily="@font/latoregular"
-        android:hint="Google"
-        android:paddingLeft="10dp"
-        android:textSize="18dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.114"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/entrance_with_help" />
-
     <TextView
         android:id="@+id/text_registration"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="76dp"
         android:fontFamily="@font/latoregular"
         android:text="Зарегистрироваться"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sign_in" />
+        app:layout_constraintTop_toTopOf="@+id/sign_in" />
 
     <TextView
         android:id="@+id/text_design_peoples"
@@ -170,5 +156,26 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/sign_in_google"
+        android:layout_width="150dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/back_button"
+        android:drawableLeft="@drawable/google"
+        android:drawablePadding="0dp"
+        android:elevation="2dp"
+        android:fontFamily="sans-serif-thin"
+        android:paddingLeft="14dp"
+        android:textAllCaps="false"
+        android:text="  Google"
+        android:textAlignment="viewStart"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.114"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/entrance_with_help" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
