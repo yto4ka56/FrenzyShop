@@ -2,5 +2,6 @@
 <resources>
     <array name="preloaded_fonts" translatable="false">
         <item>@font/cantata_one</item>
+        <item>@font/jost_thin</item>
     </array>
 </resources>

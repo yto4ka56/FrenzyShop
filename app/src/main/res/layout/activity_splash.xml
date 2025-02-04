@@ -18,7 +18,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.475"
-        app:srcCompat="@drawable/fs_removebg_preview__1_" />
+        app:srcCompat="@drawable/frenzy" />
 
     <TextView
         android:id="@+id/textView"

@@ -7,15 +7,171 @@
     android:layout_height="match_parent"
     tools:context=".AuthorizationActivity">
 
+
+    <ImageView
+        android:id="@+id/logo_frenzy"
+        android:layout_width="271dp"
+        android:layout_height="274dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.016"
+        app:srcCompat="@drawable/frenzy" />
+
+    <TextView
+        android:id="@+id/entrance_in_system"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/latoregular"
+        android:text="Вход в систему"
+        android:textColor="#060909"
+        android:textColorHint="#040303"
+        android:textSize="36sp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/logo_frenzy"
+        app:layout_constraintVertical_bias="0.337" />
+
+    <EditText
+        android:id="@+id/sign_in_email"
+        android:layout_width="350dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/back_button"
+        android:drawableLeft="@drawable/ic_mail"
+        android:drawablePadding="15dp"
+        android:elevation="2dp"
+        android:fontFamily="@font/latoregular"
+        android:hint="Электронная почта"
+        android:paddingLeft="15dp"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/entrance_in_system" />
+
+    <EditText
+        android:id="@+id/sign_in_password"
+        android:layout_width="350dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/back_button"
+        android:drawableLeft="@drawable/ic_lock"
+        android:drawablePadding="15dp"
+        android:elevation="2dp"
+        android:fontFamily="@font/latoregular"
+        android:hint="Пароль"
+        android:paddingLeft="15dp"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sign_in_email" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="или"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sign_in_password" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/latoregular"
+        android:text="Войти с помощью"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <EditText
+        android:id="@+id/sign_in_vk"
+        android:layout_width="150dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/back_button"
+        android:drawableLeft="@drawable/vk_compact_logo__2021_present__svg_removebg_preview__1_"
+        android:drawablePadding="10dp"
+        android:elevation="2dp"
+        android:fontFamily="@font/latoregular"
+        android:hint="ВКонтакте"
+        android:paddingLeft="10dp"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.881"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <EditText
+        android:id="@+id/sign_in"
+        android:layout_width="350dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/back_button"
+        android:drawablePadding="15dp"
+        android:elevation="2dp"
+        android:fontFamily="@font/latoregular"
+        android:gravity="center"
+        android:hint="Войти"
+        android:textColor="#0C0C0D"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <EditText
+        android:id="@+id/sign_in_google"
+        android:layout_width="150dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/back_button"
+        android:drawableLeft="@drawable/google"
+        android:drawablePadding="10dp"
+        android:elevation="2dp"
+        android:fontFamily="@font/latoregular"
+        android:hint="Google"
+        android:paddingLeft="10dp"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.114"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/latoregular"
+        android:text="Зарегистрироваться"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sign_in" />
+
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Авторизация"
-        android:textColor="#379192"
-        android:textSize="60sp"
+        android:layout_marginTop="28dp"
+        android:text="DESIGN BY PEOPLES"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
