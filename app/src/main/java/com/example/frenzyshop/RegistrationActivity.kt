@@ -44,10 +44,8 @@ class RegistrationActivity : AppCompatActivity(), WorkingWithData {
                 Toast.makeText(this, "Пароли не совпадают!", Toast.LENGTH_LONG).show()
             else {
                 if (login == "" || email == "" || password == "" || passwordRepeat == "")
-                    Toast.makeText(
-                        this, "Не все поля заполнены! Пожалуйста, введите все данные!",
-                        Toast.LENGTH_LONG
-                    ).show()
+                    Toast.makeText(this, "Не все поля заполнены! Пожалуйста, введите все данные!",
+                        Toast.LENGTH_LONG).show()
                 else {
                     val user = User(login, email, hash, salt, code, access, path)
                 }
