@@ -1,4 +1,4 @@
-package com.example.frenzyshop
+package com.yourdomain.frenzyshop
 import kotlin.random.Random
 
 interface WorkingWithData {

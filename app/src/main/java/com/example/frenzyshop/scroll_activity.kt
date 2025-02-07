@@ -1,4 +1,4 @@
-package com.example.frenzyshop
+package com.yourdomain.frenzyshop
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge

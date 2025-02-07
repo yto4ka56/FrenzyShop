@@ -1,4 +1,4 @@
-package com.example.frenzyshop
+package com.yourdomain.frenzyshop
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,7 +7,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.frenzyshop.databinding.ActivityRegistrationBinding
+import com.yourdomain.frenzyshop.databinding.ActivityRegistrationBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 

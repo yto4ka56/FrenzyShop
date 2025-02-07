@@ -1,4 +1,4 @@
-package com.example.frenzyshop
+package com.yourdomain.frenzyshop
 
 import android.content.Intent
 import android.os.Bundle

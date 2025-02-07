@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.frenzyshop"
+    namespace = "com.yourdomain.frenzyshop"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.frenzyshop"
+        applicationId = "com.yourdomain.frenzyshop"
         minSdk = 24
         targetSdk = 35
         versionCode = 1
@@ -42,10 +42,11 @@ android {
 
 dependencies {
     implementation(platform("com.google.firebase:firebase-bom:33.8.0"))
-    implementation(libs.androidx.core.ktx)
     implementation("com.google.firebase:firebase-analytics-ktx")
-    implementation("com.google.firebase:firebase-auth:23.1.0")
+    implementation("com.google.firebase:firebase-auth:23.2.0")
     implementation("com.google.firebase:firebase-database:21.0.0")
+    implementation("com.google.android.gms:play-services-auth:21.3.0")
+    implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.androidx.activity)

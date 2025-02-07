@@ -1,4 +1,4 @@
-package com.example.frenzyshop
+package com.yourdomain.frenzyshop
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -7,27 +7,31 @@ import android.util.Log
 import android.view.View
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
-import android.widget.EditText
 import android.widget.TextView
+import com.yourdomain.frenzyshop.databinding.ActivityRegistrationBinding
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import androidx.core.widget.doOnTextChanged
-import com.example.frenzyshop.databinding.ActivityAuthorizationBinding
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInClient
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
+import com.google.android.gms.common.api.ApiException
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
-import org.w3c.dom.Text
+import com.google.firebase.auth.GoogleAuthProvider
+import com.yourdomain.frenzyshop.databinding.ActivityAuthorizationBinding
 
 class AuthorizationActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityAuthorizationBinding
-
+    private lateinit var textViewGoogle: TextView
     private lateinit var inAnimation: Animation
     private lateinit var outAnimation: Animation
+    private lateinit var client: GoogleSignInClient
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -89,5 +93,49 @@ class AuthorizationActivity : AppCompatActivity() {
                 //  isShowed = false
               }
           }*/
+
+        // обработчик sign_in_google
+        val options = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+            .requestIdToken(getString(R.string.default_web_client_id))
+            .requestEmail()
+            .build()
+        client = GoogleSignIn.getClient(this, options)
+        textViewGoogle = findViewById(R.id.sign_in_google)
+        textViewGoogle.setOnClickListener {
+            val intent = client.signInIntent
+            startActivityForResult(intent, 10001)
+        }
     }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == 10001) {
+            val task = GoogleSignIn.getSignedInAccountFromIntent(data)
+            val account = task.getResult(ApiException::class.java)
+            val credential = GoogleAuthProvider.getCredential(account.idToken, null)
+            FirebaseAuth.getInstance().signInWithCredential(credential)
+                .addOnCompleteListener { task->
+                    if (task.isSuccessful) {
+                        val i = Intent(this, scroll_activity::class.java)
+                        startActivity(i)
+                    } else {
+                        Toast.makeText(this, "Ошибка авторизации!", Toast.LENGTH_SHORT).show()
+                    }
+                }
+        }
+    }
+
+    override fun onStart() {
+        super.onStart()
+        if (FirebaseAuth.getInstance().currentUser != null) {
+            val i = Intent(this, scroll_activity::class.java)
+            startActivity(i)
+        }
+    }
+
 }
+
+
+
+
+
