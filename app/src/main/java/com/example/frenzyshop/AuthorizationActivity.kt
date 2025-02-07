@@ -3,6 +3,7 @@ package com.example.frenzyshop
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
@@ -33,7 +34,7 @@ class AuthorizationActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         binding = ActivityAuthorizationBinding.inflate(getLayoutInflater())
-        setContentView(R.layout.activity_authorization)
+        setContentView(binding.root)
         inAnimation = AnimationUtils.loadAnimation(this, R.anim.alfa_in)
         outAnimation = AnimationUtils.loadAnimation(this, R.anim.alpha_out)
         val textView: TextView = findViewById(R.id.text_registration)
@@ -58,8 +59,14 @@ class AuthorizationActivity : AppCompatActivity() {
                         .addOnCompleteListener(object: OnCompleteListener<AuthResult> {
                             override fun onComplete(p0: Task<AuthResult?>) {
                                 if (p0.isSuccessful()) {
-                                   val intent = Intent(this@AuthorizationActivity, scroll_activity :: class.java)
+                                    Log.d("AuthorizationActivity", "Вход успешен") // добавлено логирование
+                                    val intent = Intent(this@AuthorizationActivity, scroll_activity :: class.java)
                                     startActivity(intent)
+                                    finish() // добавлено завершение активности после входа
+                                } else {
+                                    val errorMessage = p0.exception?.message ?: "Ошибка при входе!" // добавлено обработка ошибок
+                                    Log.e("AuthorizationActivity", errorMessage) // добавлено логирование
+                                    Toast.makeText(this@AuthorizationActivity, errorMessage, Toast.LENGTH_LONG).show() // добавлено вывод сообщения об ошибке
                                 }
                             }
                         })
@@ -67,21 +74,20 @@ class AuthorizationActivity : AppCompatActivity() {
             }
         })
 
+        /*  val passwordText: EditText = findViewById(R.id.sign_in_password)
+          val errorText: TextView = findViewById(R.id.password_error_text)
+          var isShowed = false
+          passwordText.doOnTextChanged { text, _, _, _ ->
+              val length = text?.length ?: 0
+              if ((length < 8 && length != 0)) {
+                  errorText.startAnimation(inAnimation)
+                  errorText.visibility = TextView.VISIBLE
+                  //errorText.visibility = TextView.VISIBLE
 
-        val passwordText: EditText = findViewById(R.id.sign_in_password)
-        val errorText: TextView = findViewById(R.id.password_error_text)
-        var isShowed = false
-        passwordText.doOnTextChanged { text, _, _, _ ->
-            val length = text?.length ?: 0
-            if ((length < 8 && length != 0)) {
-                errorText.startAnimation(inAnimation)
-                errorText.visibility = TextView.VISIBLE
-                //errorText.visibility = TextView.VISIBLE
-
-            } else {
-               //errorText.visibility = TextView.GONE
-              //  isShowed = false
-            }
-        }
+              } else {
+                 //errorText.visibility = TextView.GONE
+                //  isShowed = false
+              }
+          }*/
     }
 }

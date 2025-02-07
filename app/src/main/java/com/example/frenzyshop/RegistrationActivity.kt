@@ -56,7 +56,7 @@ class RegistrationActivity : AppCompatActivity(), WorkingWithData {
             val salt = generateRandomSalt()
             val hash = generateHash(password, salt)
 
-            FirebaseAuth.getInstance().createUserWithEmailAndPassword(email, hash)
+            FirebaseAuth.getInstance().createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener { task ->
                     if (task.isSuccessful) {
                         val firebaseUser = FirebaseAuth.getInstance().currentUser
