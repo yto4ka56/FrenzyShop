@@ -8,7 +8,7 @@
     tools:context=".SplashActivity">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/ic_logo"
         android:layout_width="386dp"
         android:layout_height="472dp"
         android:layout_marginBottom="168dp"
@@ -21,10 +21,10 @@
         app:srcCompat="@drawable/frenzy" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/text_design"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="DESIGN BY BSUIR"
+        android:text="DESIGN BY PEOPLES"
         android:textColor="#100F0F"
         android:textSize="14sp"
         android:textStyle="bold"

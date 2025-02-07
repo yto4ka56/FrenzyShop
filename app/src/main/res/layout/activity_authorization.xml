@@ -30,10 +30,9 @@
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/logo_frenzy"
-        app:layout_constraintVertical_bias="0.337" />
+        app:layout_constraintVertical_bias="0.342" />
 
     <EditText
         android:id="@+id/sign_in_email"
@@ -85,16 +84,19 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
         android:text="DESIGN BY PEOPLES"
+        android:textSize="14dp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TextSizeCheck" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/sign_in_vk"
         android:layout_width="150dp"
         android:layout_height="65dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="12dp"
         android:background="@drawable/back_button"
         android:drawableLeft="@drawable/vk_compact_logo__2021_present__svg_removebg_preview__1_"
         android:drawablePadding="0dp"
@@ -171,25 +173,23 @@
         android:id="@+id/password_error_text"
         android:layout_width="387dp"
         android:layout_height="46dp"
-        android:layout_marginTop="64dp"
         android:fontFamily="@font/latoregular"
         android:text="Длина пароля должна быть от 8 до 20 символов!"
         android:textAlignment="viewStart"
-        android:textColor="#C73434"
+        android:textColor="#F9C73434"
         android:textSize="16sp"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/sign_in_password"
-        app:layout_constraintVertical_bias="0.043" />
+        app:layout_constraintTop_toBottomOf="@+id/sign_in_password"
+        app:layout_constraintVertical_bias="0.0" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/sign_in_google"
         android:layout_width="150dp"
         android:layout_height="65dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="12dp"
         android:background="@drawable/back_button"
         android:drawableLeft="@drawable/google"
         android:drawablePadding="0dp"
